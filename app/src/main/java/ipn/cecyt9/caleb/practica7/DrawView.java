@@ -54,6 +54,18 @@ public class DrawView extends View {
         paint.setTypeface(Typeface.SANS_SERIF);
         canvas.drawTextOnPath("Cecyt 9 \"Juan de Dios Bátiz\" graficos en Android ", trazo, 150, 40, paint);
 
+        Path cuadrado = new Path();
+        cuadrado.addRect(450, 450, 700, 700, Path.Direction.CCW);
+        paint.setColor(Color.RED);
+        paint.setStrokeWidth(9);
+        paint.setStyle(Paint.Style.STROKE);
+        canvas.drawPath(cuadrado, paint);
+        paint.setStrokeWidth(1);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setTextSize(20);
+        paint.setTypeface(Typeface.SANS_SERIF);
+        canvas.drawTextOnPath("Caleb Salomón Bolaños Ramos", cuadrado, 150, 40, paint);
+
 
     }
 }
